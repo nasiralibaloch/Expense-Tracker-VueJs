@@ -8,28 +8,7 @@ import { computed, ref } from "vue";
 import { useToast } from "vue-toastification";
 
 const toast = useToast();
-const transactions = ref([
-  {
-    id: 1,
-    text: "Flower",
-    amount: -19.99,
-  },
-  {
-    id: 2,
-    text: "Salary",
-    amount: 299.97,
-  },
-  {
-    id: 3,
-    text: "Book",
-    amount: -40,
-  },
-  {
-    id: 4,
-    text: "Camera",
-    amount: 150,
-  },
-]);
+const transactions = ref([]);
 const total = computed(() => {
   return transactions.value.reduce((acc, transaction) => {
     return acc + transaction.amount;
